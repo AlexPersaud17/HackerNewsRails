@@ -1,0 +1,18 @@
+<h1>Welcome to HackerNews</h1>
+
+<% if @posts %>
+<ul>
+
+  <%@posts.each do |post|%>
+    <li><%= link_to post.title, post %></li>
+  <%end%>
+</ul>
+
+<%end%>
+
+<% if logged_in? %>
+  <a href="/posts/new">Create a Post</a>  
+<% else %>
+  <p>You need to have an account with us to make a post!</p>
+<% end %>
+
