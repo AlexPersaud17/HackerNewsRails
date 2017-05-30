@@ -1,0 +1,15 @@
+<h1>Edit Your Post</h1>
+<form action="/posts/<%=@post.id%>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <p>
+    <label name="title">Title</label>
+    <input name="title" value="<%=@post.title%>"/>
+  </p>
+  <p>
+    <label name="body">Body</label>
+    <input name="body" value="<%=@post.body%>"/>
+  </p>
+  <p>
+    <input type="submit" value="Update"/>
+  </p>
+</form>
